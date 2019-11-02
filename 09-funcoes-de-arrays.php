@@ -77,3 +77,79 @@ echo "<br>";
 print_r($carros);
 echo "<hr>";
 echo "<br>";
+/////////////////////////
+// funções de Arrays - Aula 17
+// array_unshift($array, "valor") - adiciona um ou mais elementos no início do array
+
+$frutas = array("uva", "laranja", "maçã", "pera");
+print_r($frutas);
+
+array_unshift($frutas, "manga", "acerola", "morango");
+echo "<br>";
+print_r($frutas);
+echo "<hr>";
+echo "<br>";
+
+// arrya_push($array, "valor1", "valor2", ...) - adiciona um ou mais elementos no final do array
+$legumes = array("chuchu", "cenoura", "abobrinha", "jerimum");
+print_r($legumes);
+
+array_push($legumes, "berinjela", "repolho", "rabanete");
+echo "<br>";
+print_r($legumes);
+echo "<hr>";
+echo "<br>";
+
+/////////////////////////////
+// array_combine($keys, $values) - serve para mesclar dois arrays
+$keys = array("campeão", "vice", "terceiro");
+$values = array("Náutico", "Íbis", "Santa Cruz");
+
+$times = array_combine($keys, $values);
+echo "<br>";
+echo "<br>";
+print_r($keys);
+echo "<br>";
+echo "<br>";
+print_r($values);
+echo "<br>";
+echo "<br>";
+print_r($times);
+echo "<hr>";
+echo "<br>";
+
+/// array_sum() - calcula a soma dos elementos de um array
+
+$soma = array(2,4,6,8,10,20.5);
+echo array_sum($soma);
+echo "<hr>";
+echo "<br>";
+$soma2 = array(12,2.45,3,10,100,3.3);
+$total = array_sum($soma2);
+echo "<br>";
+echo $total;
+echo "<hr>";
+echo "<br>";
+
+/// Aula 18
+
+// explode("/", "21/01/2001") - transforma string em array
+$data = "02/11/2019";
+$novaData = explode('/', $data);
+print_r($novaData);
+echo "<hr>";
+echo "<br>";
+///////////////////
+$frase = "Meu nome não é Tom";
+$array = explode(" ", $frase);
+print_r($array);
+echo "<hr>";
+echo "<br>";
+/////////////////////
+
+// implode("-", $array) - transfporma array em string
+$nomes = array("Mário", "Patrícia", "Helen", "Monteiro", "Everaldo");
+
+$string = implode(", ", $nomes);
+
+echo $string;
