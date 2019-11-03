@@ -3,13 +3,13 @@
 // == (igualdade)
 // != (não igual)
 // === (identidade)
-// !===
-// <>
-// <php
+// !== (não idêntico)
+// <> (diferente)
+// <
 // >
 // <=
 // >=
-// <=>
+// <=> (shift space)
 
 if(10 == 10):
 	echo "Positivo";
