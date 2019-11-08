@@ -1,6 +1,10 @@
 <?php
+// Conexão
+include_once 'php_action/db_connect.php';
 /// Header
 include_once 'includes/header.php';
+// Mensagem
+include_once 'includes/message.php';
 ?>
 
 <div class="row">
@@ -17,14 +21,22 @@ include_once 'includes/header.php';
       </thead>
 
       <tbody>
+        <?php
+        $sql = "SELECT * FROM clientes";
+        $resultado = mysqli_query($connect, $sql);
+        
+        while($dados = mysqli_fetch_array($resultado)):
+        ?>
         <tr>
-          <td>Severino</td>
-          <td>Joaquim</td>
-          <td>severinojoaquim@outlook.com</td>
-          <td>54</td>
+          <td><?php echo $dados['nome']; ?></td>
+          <td><?php echo $dados['sobrenome']; ?></td>
+          <td><?php echo $dados['email']; ?></td>
+          <td><?php echo $dados['idade']; ?></td>
           <td><a href="" class="btn-floating orange"><i class="material-icons">edit</a></td>
           <td><a href="" class="btn-floating red"><i class="material-icons">delete</a></td>
         </tr>
+      <?php endwhile; ?>
+
       </tbody>
     </table>
     <br>
